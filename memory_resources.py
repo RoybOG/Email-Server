@@ -56,6 +56,7 @@ class TreeNode:
     def __str__(self):
         return "({}, {})".format(self.num_value, self.__email_ids)
 
+    # CR: In contrary to the ISA file, this function does needs documatation. Most of the recursive functions does
     @staticmethod
     def traversal_in_order_of_the_dates(tree_node, min_num, max_num):
         if not tree_node:

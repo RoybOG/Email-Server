@@ -5,7 +5,7 @@ import enum
 from functools import wraps
 import threading
 
-
+# CR: I would take it to another file
 class ColumnData(enum.Enum):
     cid = 0
     name = 1
@@ -44,6 +44,7 @@ database_dir = main_directory + '/database'
 # db_cursor = db_con.cursor()
 
 
+# CR: I would take errors classes to another file
 class WritingError(Exception):
     """
     When the user enters values that contradict
@@ -60,6 +61,7 @@ class WritingError(Exception):
 """
 
 # Get rid of it!
+# CR: So do!
 data_types_encode = {
     int: {'type code': ['int', 'integer']},
     str: {'type code': ['varchar']},
@@ -675,10 +677,10 @@ class Database:
 
     def dump_data(self, table_name, insert_dict):
         """
-        Inserts a row of data to a table.
-        :param table_name: The name of the table you want to insert your row in.
-        :param insert_dict: a dictionary filled with columns from the table
-         and the data you want to enter in that column.
+            Inserts a row of data to a table.
+            :param table_name: The name of the table you want to insert your row in.
+            :param insert_dict: a dictionary filled with columns from the table
+            and the data you want to enter in that column.
         """
 
         info_dict, encrypted_columns = self.table_info(table_name)

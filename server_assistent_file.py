@@ -427,7 +427,7 @@ server_lock = threading.RLock()
 
 
 # ---ENDOFSETUP---
-
+# CR: Nice!
 _MEMORY_RESOURCES = {
     "DateNumTree": ResourceTree(os.path.join(_BASE_DIR, _FOLDER_NAMES["memory"], _FILE_NAMES["DateNumTree"]),
                                 lambda email_obj: TreeNode(email_obj.email_info["date_num"],
@@ -448,7 +448,7 @@ def get_email_id():
         cache_vars["current_email_id"] = cache_vars["current_email_id"] + 1
         return email_id
 
-
+# CR: Exceptions in another file
 class UnwantedEmail(Exception):
     def __init__(self):
         pass

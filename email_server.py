@@ -6,12 +6,12 @@ import datetime
 from json import dumps
 PORT = 6061
 
-
+# CR: Empty function?
 def check_content(title):
 
     return title
 
-
+# CR: There is actually functions to check if date string is in the right format. It is better to use it rather than write your own
 def check_date(user_date):
     max_date_size = 10
     # 2(days number) + 1(line) + 2(days number) + 1(line) + 4(years number) = 10

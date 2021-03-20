@@ -2,8 +2,11 @@ import requests
 import sys
 import re
 import html
+
+# CR: you can just use localhost
 Server = "http://10.0.0.15:6061"
 
+# CR: General note: don't always catch your errors. If the server threw an error show it to the users
 
 def send_email(email_dict):
     req = None
